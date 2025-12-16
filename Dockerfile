@@ -18,4 +18,4 @@ COPY . .
 
 RUN npm run build
 
-CMD ["npm", "run", "docker-start"]
+CMD ["sh", "-c", "remix-serve ./build/server/index.js --port $PORT"]
