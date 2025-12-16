@@ -9,11 +9,7 @@
     "deploy": "shopify app deploy",
     "config:use": "shopify app config use",
     "env": "shopify app env",
-    "start": "remix-serve ./build/server/index.js",
-   
-  "docker-start": "remix-serve ./build/server/index.js --port $PORT"
-
-,
+    "start": "remix-serve ./build/server/index.js --port ${PORT:-3000}",
     "setup": "prisma generate && prisma migrate deploy",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "shopify": "shopify",
